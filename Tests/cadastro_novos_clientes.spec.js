@@ -35,7 +35,7 @@ test('Lista de Voos', async ({page}) => {
     await page.waitForTimeout(5000) // mal visto // alfinete // temporária
     // Validar tela
     //await expect(page).toHaveURL(/.*register/)
-    //await expect(page.locator('[class="message"]')).toHaveText('Page Expired')
+    //await expect(page.locator('[class="message"]')).toHaveText('                Page Expired            ')
     //await page.waitForTimeout(5000) // mal visto // alfinete // temporária
 
 })
