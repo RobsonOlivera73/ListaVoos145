@@ -31,7 +31,7 @@ test('Lista de Voos', async ({page}) => {
     
 
     //Confirmar cadastro de novo usuário
-    await page.click('text=Register')
+    await page.click('text=Register') 
     await page.waitForTimeout(5000) // mal visto // alfinete // temporária
     // Validar tela
     //await expect(page).toHaveURL(/.*register/)
