@@ -21,22 +21,26 @@ test('Lista de Voos', async ({page}) => {
     //Clicar no link "Register"
     await page.click('text=Register')
 
+    //Validar tela "Register"
+    await expect(page).toHaveURL(/.*register/)
+    await expect(page.locator('div[class="panel-heading"]')).toHaveText('Login')
+
 
     // Preencher campos com dados válidos para cadastrar novo usuário
-    await page.fill('[name="name"]', 'Robson Oliveira')
-    await page.fill('[name="company"]', 'Tudo em Oferta Ecommerce')
-    await page.fill('[name="email"]', 'robson.oliveira@gmail.com')
-    await page.fill('[type="password"]', 'Registro123')
-    await page.fill('#password-confirm', 'Registro123')
+    await page.fill('[name="name"]', 'Robson A Oliveira')
+    await page.fill('[name="company"]', 'Tudo em Oferta Ecommerce2')
+    await page.fill('[name="email"]', 'robsonkk.oliveira@gmail.com')
+    await page.fill('[type="password"]', 'Registro1234')
+    await page.fill('[name="password_confirmation"]', 'Registro1234')
     
 
     //Confirmar cadastro de novo usuário
-    await page.click('text=Register') 
+    await page.click('.btn.btn-primary') 
     await page.waitForTimeout(5000) // mal visto // alfinete // temporária
     // Validar tela
     //await expect(page).toHaveURL(/.*register/)
-    //await expect(page.locator('[class="message"]')).toHaveText('                Page Expired            ')
-    //await page.waitForTimeout(5000) // mal visto // alfinete // temporária
+    await expect(page.locator('[class="message"]')).toHaveText('                Page Expired            ')
+    await page.waitForTimeout(5000) // mal visto // alfinete // temporária
 
 })
 
