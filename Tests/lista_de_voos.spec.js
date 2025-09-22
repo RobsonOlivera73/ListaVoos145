@@ -8,7 +8,7 @@ const { test, expect } = require('@playwright/test')
 // - Assincrona: Separado. Ex.: mensagem de texto no Whatsapp
 test('Lista de Voos', async ({page}) => {
     await page.goto('/') // abre o browser no site alvo
-    await expect(page).toHaveURL('/')  // verifica se esta na pagina inicial ou raiz
+    await expect(page).toHaveURL('/')  // verifica se esta na pagina inicial ou raiz.
    
 // Seleciona "Boston" no combo de Cidade de partida:   
     await page.selectOption('select[name="fromPort"]', { label: 'Boston' })

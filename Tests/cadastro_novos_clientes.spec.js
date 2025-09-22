@@ -23,7 +23,7 @@ test('Lista de Voos', async ({page}) => {
 
     //Validar tela "Register"
     await expect(page).toHaveURL(/.*register/)
-    await expect(page.locator('div[class="panel-heading"]')).toHaveText('Login')
+    await expect(page.locator('div[class="panel-heading"]')).toHaveText('Register')
 
 
     // Preencher campos com dados válidos para cadastrar novo usuário

@@ -12,7 +12,7 @@ test('Lista de Voos', async ({page}) => {
     await expect(page.locator('.container h1')).toContainText('Welcome to the Simple Travel Agency!')
 
 
-     // clicar no link "home" no cabeçalho da pagina
+     // clicar no link "home" no cabeçalho da pagina.
     await page.click('text=home')
 
     // Validar pagina de login
